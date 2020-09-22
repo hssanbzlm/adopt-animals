@@ -1,5 +1,7 @@
 import React from "react";
 import pet from "@frontendmasters/pet";
+import Carousel from "./Carousel";
+import ErrorBoundary from "./ErrorBoundary";
 
 class Details extends React.Component {
   constructor(props) {
@@ -11,6 +13,7 @@ class Details extends React.Component {
 
   //works only the first time
   componentDidMount() {
+    //test ErrorBoundary throw new Error("Error");
     pet.animal(this.props.id).then(({ animal }) => {
       this.setState({
         name: animal.name,
@@ -25,19 +28,24 @@ class Details extends React.Component {
   }
   render() {
     if (this.state.loading) {
-      return <h1>Loading ... </h1>;
+      return <h1> Loading... </h1>;
     }
-    const { animal, breed, location, description, name } = this.state;
+    const { animal, breed, location, description, name, media } = this.state;
     return (
       <div className="details">
+        <Carousel media={media} />
         <div>
-          <h1>{name}</h1>
-          <h2>{`${animal}- ${breed}-${location}`}</h2>
-          <button> Adopt {name} </button>
-          <p>{description}</p>
-        </div>
+          <h1> {name} </h1> <h2> {`${animal}- ${breed}-${location}`} </h2>{" "}
+          <button> Adopt {name} </button> <p> {description} </p>{" "}
+        </div>{" "}
       </div>
     );
   }
 }
-export default Details;
+export default function DetailsWithErrorBoundary(props) {
+  return (
+    <ErrorBoundary>
+      <Details {...props} />
+    </ErrorBoundary>
+  );
+}
