@@ -4,15 +4,14 @@ import SearchParams from "./SearchParams";
 import { Link, Router } from "@reach/router";
 import Details from "./Details";
 import ThemeContext from "./ThemeContext";
+import NavBar from "./NavBar";
 
 const App = () => {
   const theme = useState("peru");
   return (
     <ThemeContext.Provider value={theme}>
       <div>
-        <header>
-          <Link to="/">Adopt Me !</Link>
-        </header>
+        <NavBar />
         <Router>
           <SearchParams path="/" />
           <Details path="/details/:id" />
