@@ -2,8 +2,8 @@ import React, { lazy } from "react";
 import pet from "@frontendmasters/pet";
 import Carousel from "./Carousel";
 import ErrorBoundary from "./ErrorBoundary";
-import ThemeContext from "./ThemeContext";
 import { navigate } from "@reach/router";
+import { connect } from "react-redux";
 //import Modal from "./Modal";
 
 const Modal = lazy(() => import("./Modal"));
@@ -34,7 +34,9 @@ class Details extends React.Component {
     });
   }
   toggleModal = () => {
-    return this.setState({ showModal: !this.state.showModal });
+    return this.setState({
+      showModal: !this.state.showModal,
+    });
   };
   adopt = () => navigate(this.state.url);
   render() {
@@ -52,41 +54,41 @@ class Details extends React.Component {
     } = this.state;
     return (
       <div className="details">
-        <Carousel media={media} />
+        <Carousel media={media} />{" "}
         <div>
           <h1> {name} </h1> <h2> {`${animal}- ${breed}-${location}`} </h2>{" "}
-          <ThemeContext.Consumer>
-            {([theme]) => (
-              <button
-                onClick={this.toggleModal}
-                style={{ backgroundColor: theme }}
-              >
-                {" "}
-                Adopt {name}{" "}
-              </button>
-            )}
-          </ThemeContext.Consumer>
+          <button
+            onClick={this.toggleModal}
+            style={{
+              backgroundColor: this.props.theme,
+            }}
+          >
+            {" "}
+            Adopt {name}{" "}
+          </button>
           <p> {description} </p>{" "}
           {showModal ? (
             <Modal>
               <div>
-                <h1>Would you like to adopt {name} ?</h1>
+                <h1> Would you like to adopt {name} ? </h1>{" "}
                 <div className="buttons">
-                  <button onClick={this.adopt}>Yes</button>
-                  <button onClick={this.toggleModal}>No I'm a monster</button>
-                </div>
-              </div>
+                  <button onClick={this.adopt}> Yes </button>{" "}
+                  <button onClick={this.toggleModal}> No I 'm a monster</button>{" "}
+                </div>{" "}
+              </div>{" "}
             </Modal>
-          ) : null}
+          ) : null}{" "}
         </div>{" "}
       </div>
     );
   }
 }
+const mapStateToProps = ({ theme }) => ({ theme });
+const WrappedDetails = connect(mapStateToProps)(Details);
 export default function DetailsWithErrorBoundary(props) {
   return (
     <ErrorBoundary>
-      <Details {...props} />
+      <WrappedDetails {...props} />{" "}
     </ErrorBoundary>
   );
 }
