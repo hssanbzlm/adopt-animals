@@ -7,7 +7,6 @@ import changeTheme from "./actionCreators/changeTheme";
 import changeLocation from "./actionCreators/changeLocation";
 
 const SearchParams = (props) => {
-  const [location, setLocation] = useState("Seattle,WA");
   const [breeds, setBreeds] = useState([]);
   const [animal, AnimalDropdown] = useDropdown("Animal", "dog", ANIMALS);
   const [breed, BreedDropdown, setBreed] = useDropdown("Breed", "", breeds);
@@ -55,7 +54,6 @@ const SearchParams = (props) => {
           <select
             value={props.theme}
             onChange={(e) => props.setTheme(e.target.value)}
-            onBlur={(e) => props.setTheme(e.target.value)}
           >
             <option value="peru"> peru </option>{" "}
             <option value="darkblue"> darkblue </option>{" "}
@@ -76,13 +74,16 @@ const SearchParams = (props) => {
     </div>
   );
 };
-const mapStateToProps = ({ theme, location }) => ({
-  theme,
-  location,
-});
-const mapDispatchProps = (dispatch) => ({
+const mapStateToProps = (state) => {
+  return {
+    theme: state.theme,
+    location: state.location,
+  };
+};
+const mapDispatchToProps = (dispatch) => ({
   setTheme: (theme) => dispatch(changeTheme(theme)),
   setLocation: (location) => dispatch(changeLocation(location)),
 });
-export default connect(mapStateToProps, mapDispatchProps)(SearchParams); // conect returns a function we invoked
+export default connect(mapStateToProps, mapDispatchToProps)(SearchParams);
+// conect returns a function we invoked
 // it with searchParams
