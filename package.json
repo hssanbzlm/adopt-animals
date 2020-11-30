@@ -26,7 +26,7 @@
     "deploy": "gh-pages -d build",
     "dev": "parcel src/index.html",
     "start": "react-scripts start",
-    "build": "parcel build src/index.html --out-dir prod",
+    "build": "parcel build src/index.html --out-dir build",
     "test": "jest",
     "test:update": "jest -u",
     "test:watch": "jest --watch",
