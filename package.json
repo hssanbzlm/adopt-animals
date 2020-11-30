@@ -22,11 +22,10 @@
     "redux": "^4.0.5"
   },
   "scripts": { 
+    "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "dev": "parcel src/index.html",
-    "start": "react-scripts start",
-    "build": "parcel build src/index.html --out-dir build",
+    "build": "react-scripts build",
     "test": "jest",
     "test:update": "jest -u",
     "test:watch": "jest --watch",
