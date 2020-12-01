@@ -9,7 +9,7 @@ const NavBar = () => (
       padding: 15px;
     `}
   >
-    <Link to="/adopt-animals">Adopt me </Link>
+    <Link to="/">Adopt me </Link>
     <span role="img" aria-label="logo">
       🐑
     </span>

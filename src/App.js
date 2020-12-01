@@ -14,7 +14,7 @@ const App = () => {
         <Suspense fallback={<h1> Loading... </h1>}>
           {" "}
           <Router>
-            <SearchParams path="/adopt-animals" />
+            <SearchParams path="/" />
             <Details path="/details/:id" />
           </Router>{" "}
         </Suspense>{" "}
