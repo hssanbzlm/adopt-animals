@@ -1,0 +1,2 @@
+(this["webpackJsonpadopt-animals"]=this["webpackJsonpadopt-animals"]||[]).push([[4],{1123:function(e,t,n){"use strict";n.r(t);var r=n(0),c=n.n(r),u=n(6);t.default=function(e){var t=e.children,n=Object(r.useRef)(null);if(!n.current){var a=document.createElement("div");n.current=a}return Object(r.useEffect)((function(){var e=document.getElementById("modal");return e.appendChild(n.current),function(){return e.removeChild(n.current)}}),[]),Object(u.createPortal)(c.a.createElement("div",null,t),n.current)}}}]);
+//# sourceMappingURL=4.86e4b5ef.chunk.js.map
