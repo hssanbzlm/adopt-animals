@@ -9,7 +9,7 @@ const Pet = (props) => {
   return (
     <Link to={`/details/${props.id}`} className="pet">
       <div className="image-container">
-        <img src={hero} alt={props.name} />{" "}
+        <img src={hero} alt={props.name} />{"  "}
       </div>{" "}
       <div className="info">
         <h1> {props.name} </h1>{" "}
