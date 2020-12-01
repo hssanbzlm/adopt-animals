@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.8cbb9a33.chunk.css",
-    "main.js": "/static/js/main.c93668ba.chunk.js",
-    "main.js.map": "/static/js/main.c93668ba.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.5f2cc927.js",
-    "runtime-main.js.map": "/static/js/runtime-main.5f2cc927.js.map",
-    "static/js/2.640e7b0d.chunk.js": "/static/js/2.640e7b0d.chunk.js",
-    "static/js/2.640e7b0d.chunk.js.map": "/static/js/2.640e7b0d.chunk.js.map",
-    "static/js/3.a96dc200.chunk.js": "/static/js/3.a96dc200.chunk.js",
-    "static/js/3.a96dc200.chunk.js.map": "/static/js/3.a96dc200.chunk.js.map",
-    "static/js/4.86e4b5ef.chunk.js": "/static/js/4.86e4b5ef.chunk.js",
-    "static/js/4.86e4b5ef.chunk.js.map": "/static/js/4.86e4b5ef.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.1b13a05ee06496781674f73a96137828.js": "/precache-manifest.1b13a05ee06496781674f73a96137828.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.8cbb9a33.chunk.css.map": "/static/css/main.8cbb9a33.chunk.css.map",
-    "static/js/2.640e7b0d.chunk.js.LICENSE.txt": "/static/js/2.640e7b0d.chunk.js.LICENSE.txt"
+    "main.css": "/adopt-animals/static/css/main.8cbb9a33.chunk.css",
+    "main.js": "/adopt-animals/static/js/main.5a62f8bd.chunk.js",
+    "main.js.map": "/adopt-animals/static/js/main.5a62f8bd.chunk.js.map",
+    "runtime-main.js": "/adopt-animals/static/js/runtime-main.6a41b394.js",
+    "runtime-main.js.map": "/adopt-animals/static/js/runtime-main.6a41b394.js.map",
+    "static/js/2.a012f9de.chunk.js": "/adopt-animals/static/js/2.a012f9de.chunk.js",
+    "static/js/2.a012f9de.chunk.js.map": "/adopt-animals/static/js/2.a012f9de.chunk.js.map",
+    "static/js/3.a96dc200.chunk.js": "/adopt-animals/static/js/3.a96dc200.chunk.js",
+    "static/js/3.a96dc200.chunk.js.map": "/adopt-animals/static/js/3.a96dc200.chunk.js.map",
+    "static/js/4.86e4b5ef.chunk.js": "/adopt-animals/static/js/4.86e4b5ef.chunk.js",
+    "static/js/4.86e4b5ef.chunk.js.map": "/adopt-animals/static/js/4.86e4b5ef.chunk.js.map",
+    "index.html": "/adopt-animals/index.html",
+    "precache-manifest.31290ac7b4c061b9cf1b48df1b038b06.js": "/adopt-animals/precache-manifest.31290ac7b4c061b9cf1b48df1b038b06.js",
+    "service-worker.js": "/adopt-animals/service-worker.js",
+    "static/css/main.8cbb9a33.chunk.css.map": "/adopt-animals/static/css/main.8cbb9a33.chunk.css.map",
+    "static/js/2.a012f9de.chunk.js.LICENSE.txt": "/adopt-animals/static/js/2.a012f9de.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5f2cc927.js",
-    "static/js/2.640e7b0d.chunk.js",
+    "static/js/runtime-main.6a41b394.js",
+    "static/js/2.a012f9de.chunk.js",
     "static/css/main.8cbb9a33.chunk.css",
-    "static/js/main.c93668ba.chunk.js"
+    "static/js/main.5a62f8bd.chunk.js"
   ]
 }
